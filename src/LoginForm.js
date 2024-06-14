@@ -62,7 +62,7 @@ const LoginForm = () => {
             setInit(true);
         }
 
-    });
+    },[isInit]);
 
     return (
 
@@ -76,7 +76,7 @@ const LoginForm = () => {
                     Password&nbsp;&nbsp;&nbsp;&nbsp;
                     <input className={passwordClass} type="text" name='password' onChange={(e) => { getCredentials(e) }} />
                 </label>
-                <input type='submit' value='Log in' onClick={(e) => { getInput(e) }} />
+                <input className='submit' type='submit' value='Log in' onClick={(e) => { getInput(e) }} />
                 {isErrorShown ? <p className='error'>You need to fill all fields</p> : null}
 
             </form>

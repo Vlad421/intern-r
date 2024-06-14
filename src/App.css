@@ -32,6 +32,15 @@
   margin-left: auto;
 }
 
+.submit{
+  font-size: calc(10px + 2vmin);
+  background-color: #4f5596;
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
 .inputError{
   margin-left: auto;
   border: 2px solid red;
