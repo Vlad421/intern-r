@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-
+const DEF_CLASS = "loginInput";
+const ERR_CLASS = "inputError";
 
 
 
@@ -10,8 +11,6 @@ const LoginForm = () => {
     const [password, setPassword] = useState();
     const [loginClass, setLoginClass] = useState();
     const [passwordClass, setPasswordClass] = useState();
-    const DEF_CLASS = "loginInput";
-    const ERR_CLASS = "inputError";
     const [isInit, setInit] = useState();
     const [isErrorShown, setError] = useState();
 
@@ -62,7 +61,7 @@ const LoginForm = () => {
             setInit(true);
         }
 
-    },[isInit]);
+    }, [isInit]);
 
     return (
 
