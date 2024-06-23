@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const DEF_CLASS = "loginInput";
 const ERR_CLASS = "inputError";
+var creds;
 
 
 
@@ -13,7 +15,27 @@ const LoginForm = () => {
     const [passwordClass, setPasswordClass] = useState();
     const [isInit, setInit] = useState();
     const [isErrorShown, setError] = useState();
+    const [isLoginAttempted, setLoginAttempt] = useState();
+    const [isCredsMatch, setCredsMatch] = useState();
+    const navigate = useNavigate();
 
+    async function isLogin() {
+        const resp = await fetch("http://localhost:3030/creds");
+        const credData = await resp.json();
+
+        const user = credData.find((user) => user.login === login && user.pass === password);
+
+        if (user) {
+            setLoginAttempt(false);
+            navigate("/products");
+        }
+        else {
+            setLoginAttempt(true);
+
+        }
+
+
+    }
 
     const getInput = (e) => {
         e.preventDefault();
@@ -23,6 +45,8 @@ const LoginForm = () => {
             setLoginClass(DEF_CLASS);
             setPasswordClass(DEF_CLASS);
             console.log("Login - " + login, "Password - " + password);
+
+
 
         }
         else {
@@ -61,6 +85,7 @@ const LoginForm = () => {
             setInit(true);
         }
 
+
     }, [isInit]);
 
     return (
@@ -69,14 +94,24 @@ const LoginForm = () => {
             <form className="loginForm">
                 <label className="loginFormLabel">
                     Login
-                    <input className={loginClass} type="text" name='login' onChange={(e) => { getCredentials(e) }} />
+                    <input className={loginClass} type="text" name='login' onChange={(e) => { getCredentials(e) }} placeholder="login is 'login' " />
                 </label>
                 <label className="loginFormLabel">
                     Password&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input className={passwordClass} type="text" name='password' onChange={(e) => { getCredentials(e) }} />
+                    <input className={passwordClass} type="text" name='password' onChange={(e) => { getCredentials(e) }} placeholder="password is 'pass' " />
                 </label>
-                <input className='submit' type='submit' value='Log in' onClick={(e) => { getInput(e) }} />
+                <input className='submit' type='submit' value='Log in' onClick={(e) => {
+                    getInput(e);
+                    console.log(isLogin())
+                    isLogin()
+                    if (isCredsMatch || isCredsMatch) {
+
+                        console.log(login, password)
+                    }
+                }} />
                 {isErrorShown ? <p className='error'>You need to fill all fields</p> : null}
+                {isLoginAttempted ? <p className='error'>Wrong login or password</p> : null}
+
 
             </form>
 

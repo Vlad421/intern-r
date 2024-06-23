@@ -3,34 +3,40 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
     const [products, setProducts] = useState();
+    const [isLoaded, setLoaded] = useState();
 
 
     useEffect(() => {
-        fetch("http://localhost:3030/products").
-            then(
-                responce => {
-                    return responce.json()
-                }
-            ).then(
-                data => {
-                    console.log(data)
-                    setProducts(data)
-                }
-            )
+
+        setTimeout(() => {
+            fetch("http://localhost:3030/products").
+                then(
+                    responce => {
+                        return responce.json();
+                    }
+                ).then(
+                    data => {
+                        console.log(data);
+                        setProducts(data);
+                        setLoaded(true);
+                    }
+                )
+        }, 1000);
+
     });
 
 
     return (
         <div>
             <div className="logout">
-                
-                
-                <Link to="/" style={{marginLeft:"auto"}}><button className="logoutButton" >LogOut</button></Link>
+
+                <input type="text" placeholder="Filter.."/>
+                <Link to="/" style={{ marginLeft: "auto" }}><button className="logoutButton" >LogOut</button></Link>
                 {/* <button className="logoutButton" >LogOut</button> */}
             </div>
             <div className="products">
-               <div>Products</div> 
-
+                <div>Products</div>
+                {!isLoaded && <div>Loading....</div>}
 
                 <div className="product-list">
                     {products && products.map(prod => (
