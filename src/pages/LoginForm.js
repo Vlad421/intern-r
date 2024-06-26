@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const DEF_CLASS = "loginInput";
 const ERR_CLASS = "inputError";
@@ -16,7 +16,6 @@ const LoginForm = () => {
     const [isInit, setInit] = useState();
     const [isErrorShown, setError] = useState();
     const [isLoginAttempted, setLoginAttempt] = useState();
-    const [isCredsMatch, setCredsMatch] = useState();
     const navigate = useNavigate();
 
     async function isLogin() {
@@ -45,9 +44,7 @@ const LoginForm = () => {
             setLoginClass(DEF_CLASS);
             setPasswordClass(DEF_CLASS);
             console.log("Login - " + login, "Password - " + password);
-
-
-
+            isLogin();
         }
         else {
             setError(true);
@@ -102,12 +99,6 @@ const LoginForm = () => {
                 </label>
                 <input className='submit' type='submit' value='Log in' onClick={(e) => {
                     getInput(e);
-                    console.log(isLogin())
-                    isLogin()
-                    if (isCredsMatch || isCredsMatch) {
-
-                        console.log(login, password)
-                    }
                 }} />
                 {isErrorShown ? <p className='error'>You need to fill all fields</p> : null}
                 {isLoginAttempted ? <p className='error'>Wrong login or password</p> : null}
