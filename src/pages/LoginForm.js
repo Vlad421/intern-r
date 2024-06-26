@@ -87,10 +87,11 @@ const LoginForm = () => {
 
     }
     useEffect(() => {
+	
 		if(isAuthenticated){
-			navigate("/");
+			navigate("/products");
 		}
-
+		console.log("isInit " + isInit)
         if (!isInit) {
             setLoginClass(DEF_CLASS);
 
@@ -99,7 +100,7 @@ const LoginForm = () => {
         }
 
 
-    }, [isInit,isLoged]);
+    }, [isInit , isAuthenticated]);
 
     return (
 		

@@ -49,7 +49,7 @@ const Products = () => {
             <div className="logout">
 
                 <input type="text" placeholder="Filter.. (by name or description)" onChange={e => { getFilterInput(e.target.value) }} />
-                <Link to="/" style={{ marginLeft: "auto" }}><button className="logoutButton" >LogOut</button></Link>
+                <Link to="/" style={{ marginLeft: "auto" }} onClick={() => { setAuthenticated(false) }}><button className="logoutButton" >LogOut</button></Link>
 
             </div>
             <div className="products">
