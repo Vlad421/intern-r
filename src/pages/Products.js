@@ -5,7 +5,7 @@ const Products = () => {
     const [products, setProducts] = useState();
     const [isLoaded, setLoaded] = useState();
     const [filterString, setFilterString] = useState("");
-
+	const isAuthenticated = useContext(Auth);
 
 
     const getFilterInput = (e) => {

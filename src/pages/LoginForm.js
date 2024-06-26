@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, createContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const DEF_CLASS = "loginInput";
 const ERR_CLASS = "inputError";
 var creds;
 
-
+const Auth = createContext();
 
 const LoginForm = () => {
 
@@ -16,13 +16,15 @@ const LoginForm = () => {
     const [isInit, setInit] = useState();
     const [isErrorShown, setError] = useState();
     const [isLoginAttempted, setLoginAttempt] = useState();
+	const [user, setUser] = useState(false);
     const navigate = useNavigate();
+	
 
     async function isLogin() {
         const resp = await fetch("http://localhost:3030/creds");
         const credData = await resp.json();
 
-        const user = credData.find((user) => user.login === login && user.pass === password);
+        setUser(credData.find((user) => user.login === login && user.pass === password));
 
         if (user) {
             setLoginAttempt(false);
@@ -86,7 +88,7 @@ const LoginForm = () => {
     }, [isInit]);
 
     return (
-
+		<Auth.Provider value={user}>
         <div className="login">
             <form className="loginForm">
                 <label className="loginFormLabel">
