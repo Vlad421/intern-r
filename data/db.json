@@ -1,0 +1,81 @@
+{
+    "creds":[
+        {
+            "id":1,
+            "login":"login",
+            "pass":"pass"
+
+        }
+
+    ],
+
+    "products":[
+        {
+            "id":1,
+            "name":"Chair",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis eros quis metus vulputate, sed dictum dolor mollis. Nam faucibus maximus diam id fermentum. Fusce cursus enim non velit ornare efficitur. Aenean nec dui vel turpis iaculis porttitor. Fusce cursus tellus vitae scelerisque dapibus. Fusce eget facilisis velit. Vivamus vitae euismod tellus. Maecenas nibh lacus, euismod non posuere nec, pulvinar at ante. Integer ipsum turpis, tincidunt eget tincidunt vitae, rutrum maximus sapien. Nulla sodales lacinia mi ac eleifend. Fusce metus massa, semper non iaculis volutpat, laoreet ac velit. Praesent felis justo, accumsan ac porttitor quis, dictum ac tortor.",
+            "price":100
+
+        },
+        {
+            "id":2,
+            "name":"Chariot",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum justo id consequat bibendum. In maximus finibus lectus, vel tempor lectus pretium at. Morbi eget vehicula arcu. Morbi gravida risus ac libero mattis viverra. Proin congue arcu enim, sed bibendum ex fermentum pretium. Ut vestibulum odio at urna gravida, a elementum nisi efficitur. Quisque id massa sagittis, semper tellus et, tincidunt ex. Vivamus iaculis tempor ex, sed imperdiet elit fringilla eget. Nullam nulla lectus, lacinia at rhoncus ut, sagittis eget ante. In et porttitor quam. Nunc luctus leo ut sapien tristique, at cursus tellus finibus. Cras volutpat nulla ut justo placerat ultrices in sit amet urna. Sed tempor purus tortor. Ut efficitur felis vel gravida accumsan. Morbi scelerisque sapien vitae risus volutpat pharetra. Aenean tristique ut massa ac gravida.",
+            "price":100
+
+        },
+        {
+            "id":3,
+            "name":"Ball",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum aliquet ex vel tincidunt. Sed ante nisi, lobortis quis gravida nec, hendrerit ut purus. Sed congue consectetur enim at varius. Nullam sed ultricies dui, efficitur congue urna. Vivamus consectetur sapien odio, vel placerat diam tincidunt et. Phasellus porttitor nibh faucibus, dapibus massa nec, congue nibh. Ut varius, magna a dignissim tempus, purus neque mollis purus, sit amet elementum diam nisl eget quam. Mauris at tempor odio, non malesuada ipsum. Duis lacinia dictum nibh quis convallis. Maecenas pharetra quam vestibulum sem aliquam, id interdum diam dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "price":100
+
+        },
+        {
+            "id":4,
+            "name":"Wallpaper",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum turpis id fermentum faucibus. Nullam ultrices auctor nibh at viverra. Duis scelerisque vulputate lacus. Curabitur eu augue at odio accumsan ultrices vel vel lacus. Nunc non pulvinar lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi non hendrerit ligula. Aenean efficitur malesuada pretium. Quisque dui nisi, fermentum et hendrerit id, condimentum in mauris. Vestibulum a vestibulum diam. Nunc a ex sed odio scelerisque placerat. In sed ipsum varius, viverra lorem vel, luctus nulla. Ut quis mattis nisl. Pellentesque ut dapibus est. Vivamus vitae augue a elit lobortis posuere ac non lectus.",
+            "price":200
+
+        },
+        {
+            "id":5,
+            "name":"Cat litter",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum eros vel gravida tincidunt. Sed consectetur leo elementum, aliquam urna sit amet, pellentesque nibh. Nullam sed lacinia ligula, at rhoncus odio. Duis tristique congue orci, vitae sagittis justo blandit maximus. Curabitur commodo lobortis commodo. Sed et orci odio. Phasellus sit amet ex scelerisque, accumsan mauris vel, bibendum quam. Phasellus eget rutrum tellus, quis cursus nulla. Sed ipsum enim, tempor volutpat tortor a, volutpat posuere est. Nullam feugiat aliquet velit ut ornare. Suspendisse at nisl vitae urna lobortis feugiat. Praesent eu pulvinar ex, vel tristique metus. Sed et velit dictum, sodales justo sit amet, pellentesque justo. Nunc vitae hendrerit nisl, at ultricies lorem.",
+            "price":10000
+
+        },
+        {
+            "id":6,
+            "name":"Caterpilar squish",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis eros quis metus vulputate, sed dictum dolor mollis. Nam faucibus maximus diam id fermentum. Fusce cursus enim non velit ornare efficitur. Aenean nec dui vel turpis iaculis porttitor. Fusce cursus tellus vitae scelerisque dapibus. Fusce eget facilisis velit. Vivamus vitae euismod tellus. Maecenas nibh lacus, euismod non posuere nec, pulvinar at ante. Integer ipsum turpis, tincidunt eget tincidunt vitae, rutrum maximus sapien. Nulla sodales lacinia mi ac eleifend. Fusce metus massa, semper non iaculis volutpat, laoreet ac velit. Praesent felis justo, accumsan ac porttitor quis, dictum ac tortor.",
+            "price":5656
+
+        },
+        {
+            "id":7,
+            "name":"Wall decoration",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum aliquet ex vel tincidunt. Sed ante nisi, lobortis quis gravida nec, hendrerit ut purus. Sed congue consectetur enim at varius. Nullam sed ultricies dui, efficitur congue urna. Vivamus consectetur sapien odio, vel placerat diam tincidunt et. Phasellus porttitor nibh faucibus, dapibus massa nec, congue nibh. Ut varius, magna a dignissim tempus, purus neque mollis purus, sit amet elementum diam nisl eget quam. Mauris at tempor odio, non malesuada ipsum. Duis lacinia dictum nibh quis convallis. Maecenas pharetra quam vestibulum sem aliquam, id interdum diam dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "price":2323
+
+        },
+        {
+            "id":8,
+            "name":"Decorative plant",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum justo id consequat bibendum. In maximus finibus lectus, vel tempor lectus pretium at. Morbi eget vehicula arcu. Morbi gravida risus ac libero mattis viverra. Proin congue arcu enim, sed bibendum ex fermentum pretium. Ut vestibulum odio at urna gravida, a elementum nisi efficitur. Quisque id massa sagittis, semper tellus et, tincidunt ex. Vivamus iaculis tempor ex, sed imperdiet elit fringilla eget. Nullam nulla lectus, lacinia at rhoncus ut, sagittis eget ante. In et porttitor quam. Nunc luctus leo ut sapien tristique, at cursus tellus finibus. Cras volutpat nulla ut justo placerat ultrices in sit amet urna. Sed tempor purus tortor. Ut efficitur felis vel gravida accumsan. Morbi scelerisque sapien vitae risus volutpat pharetra. Aenean tristique ut massa ac gravida.",
+            "price":12345
+
+        },
+        {
+            "id":9,
+            "name":"Frame",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis eros quis metus vulputate, sed dictum dolor mollis. Nam faucibus maximus diam id fermentum. Fusce cursus enim non velit ornare efficitur. Aenean nec dui vel turpis iaculis porttitor. Fusce cursus tellus vitae scelerisque dapibus. Fusce eget facilisis velit. Vivamus vitae euismod tellus. Maecenas nibh lacus, euismod non posuere nec, pulvinar at ante. Integer ipsum turpis, tincidunt eget tincidunt vitae, rutrum maximus sapien. Nulla sodales lacinia mi ac eleifend. Fusce metus massa, semper non iaculis volutpat, laoreet ac velit. Praesent felis justo, accumsan ac porttitor quis, dictum ac tortor.",
+            "price":6542
+
+        }
+
+
+    ]
+
+
+}

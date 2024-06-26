@@ -1,38 +1,43 @@
+* {
+  background-color: #282c34;
+  color: white;
+  font-size: calc(12px + 2vmin);
+}
+
 .App {
   text-align: center;
 }
 
 
 .login {
-  background-color: #282c34;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(12px + 2vmin);
-  color: white;
+
 }
 
-.loginForm{
+.loginForm {
   display: flex;
   flex-direction: column;
 }
 
 
-.loginFormLabel{
+.loginFormLabel {
   display: flex;
-  /*margin-right: 20vh;*/
-  -webkit-user-select: none; 
-  -ms-user-select: none; 
-  user-select: none; 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.loginInput{
+.loginInput {
   margin-left: auto;
 }
 
-.submit{
+.submit {
   font-size: calc(10px + 2vmin);
   background-color: #4f5596;
   border: none;
@@ -41,12 +46,13 @@
   text-decoration: none;
   cursor: pointer;
 }
-.inputError{
+
+.inputError {
   margin-left: auto;
   border: 2px solid red;
 }
 
-.error{
+.error {
   color: red;
   font-size: (8px + 2vmin);
 
@@ -56,3 +62,19 @@
   color: #61dafb;
 }
 
+.product-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+
+
+.logout{
+  display: flex;
+
+}
+.logoutButton{
+  margin-left: auto;
+  background-color: #9f1111b0;
+}
