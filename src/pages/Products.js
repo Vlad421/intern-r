@@ -16,13 +16,7 @@ const Products = () => {
 
         }, 500);
 
-
-
-
-
     }
-
-
 
     useEffect(() => {
 
@@ -35,7 +29,7 @@ const Products = () => {
                     }
                 ).then(
                     data => {
-                        //console.log(data);
+
                         setProducts(data);
                         setLoaded(true);
                     }
@@ -49,9 +43,9 @@ const Products = () => {
         <div>
             <div className="logout">
 
-                <input type="text" placeholder="Filter.." onChange={e => { getFilterInput(e.target.value); console.log(filterString); }} />
+                <input type="text" placeholder="Filter.. (by name or description)" onChange={e => { getFilterInput(e.target.value) }} />
                 <Link to="/" style={{ marginLeft: "auto" }}><button className="logoutButton" >LogOut</button></Link>
-                {/* <button className="logoutButton" >LogOut</button> */}
+
             </div>
             <div className="products">
                 <div>Products</div>
