@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState,useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {Auth} from '../App';
 
 const Products = () => {
     const [products, setProducts] = useState();
     const [isLoaded, setLoaded] = useState();
     const [filterString, setFilterString] = useState("");
-	const isAuthenticated = useContext(Auth);
-
+	const { isAuthenticated,setAuthenticated } = useContext(Auth);
+    const navigate = useNavigate();
 
     const getFilterInput = (e) => {
 
@@ -19,6 +20,10 @@ const Products = () => {
     }
 
     useEffect(() => {
+
+		if(!isAuthenticated){
+			navigate("/");
+		}
 
         setTimeout(() => {
 

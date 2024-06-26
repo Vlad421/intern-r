@@ -1,13 +1,18 @@
-import { useEffect, useState, createContext } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {Auth} from '../App';
 
 const DEF_CLASS = "loginInput";
 const ERR_CLASS = "inputError";
 var creds;
 
-const Auth = createContext();
+
+
 
 const LoginForm = () => {
+
+
+	const { isAuthenticated,setAuthenticated } = useContext(Auth);
 
     const [login, setLogin] = useState();
     const [password, setPassword] = useState();
@@ -16,19 +21,25 @@ const LoginForm = () => {
     const [isInit, setInit] = useState();
     const [isErrorShown, setError] = useState();
     const [isLoginAttempted, setLoginAttempt] = useState();
-	const [user, setUser] = useState(false);
+	const [isLoged, setLoged] = useState();
     const navigate = useNavigate();
+	
 	
 
     async function isLogin() {
+		console.log(isAuthenticated);
         const resp = await fetch("http://localhost:3030/creds");
         const credData = await resp.json();
 
-        setUser(credData.find((user) => user.login === login && user.pass === password));
+        const user = credData.find((user) => user.login === login && user.pass === password);
+		
 
         if (user) {
+			setAuthenticated(true);
+			setLoged(true)
+			console.log(isAuthenticated);
             setLoginAttempt(false);
-            navigate("/products");
+            //navigate("/products");
         }
         else {
             setLoginAttempt(true);
@@ -76,6 +87,9 @@ const LoginForm = () => {
 
     }
     useEffect(() => {
+		if(isAuthenticated){
+			navigate("/");
+		}
 
         if (!isInit) {
             setLoginClass(DEF_CLASS);
@@ -85,10 +99,11 @@ const LoginForm = () => {
         }
 
 
-    }, [isInit]);
+    }, [isInit,isLoged]);
 
     return (
-		<Auth.Provider value={user}>
+		
+		
         <div className="login">
             <form className="loginForm">
                 <label className="loginFormLabel">
@@ -109,6 +124,8 @@ const LoginForm = () => {
             </form>
 
         </div>
+		
+		
     );
 }
 
